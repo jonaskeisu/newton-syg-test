@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Lektion 1 - Introduktion till unit-testning",
+        "date": "2020-11-24",
+        "start": "09:00",
+        "end": "12:00"
+    }, 
+    {
+        "title": "Lektion 2 - xUnit",
+        "date": "2020-11-25",
+        "start": "09:00",
+        "end": "12:00"
+    },
+    {
+        "title": "Lektion 3 - Test Driven Development",
+        "date": "2020-11-24",
+        "start": "09:00",
+        "end": "12:00"
+    }
+]
