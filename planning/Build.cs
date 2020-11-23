@@ -59,7 +59,7 @@ namespace planning
         public int Duration { get; set; }
         public Repetition Repeat { get; set; }
         public bool AllDay { get; set; }
-        public string Classes { get; set; }
+        public string Class { get; set; }
         public int Layer { get; set; }
 
         DateTime FirstDay => Start;
@@ -130,7 +130,7 @@ namespace planning
 
         IEnumerable<Activity> GetActivities(DateTime dt)
         {
-            foreach (var activity in Activities)
+            foreach (var activity in Activities.Where(a => !a.AllDay))
             {
                 foreach (var occurence in activity.Occurences)
                 {
@@ -150,14 +150,14 @@ namespace planning
             {
                 return (null, 0);
             }
-            var activity = activities.Where(a => !a.AllDay).OrderByDescending(a => a.Layer).First();
+            var activity = activities.OrderByDescending(a => a.Layer).First();
             var stepDt = dt;
             while (true)
             {
                 stepDt = stepDt.AddHours(1);
                 activities = GetActivities(stepDt);
                 if (!(activities.Any()
-                    && activities.Where(a => !a.AllDay).OrderByDescending(a => a.Layer).First() == activity))
+                    && activities.OrderByDescending(a => a.Layer).First() == activity))
                 {
                     return (activity, (stepDt - dt).Hours);
                 }
@@ -183,7 +183,6 @@ namespace planning
                 }
             };
 
-
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
@@ -197,10 +196,10 @@ namespace planning
 
             Schedule schedule = new Schedule()
             {
-                Activities = JsonSerializer.Deserialize<List<Activity>>(File.ReadAllText("test.json"), options)
+                Activities = JsonSerializer.Deserialize<List<Activity>>(File.ReadAllText("schedule.json"), options)
             };
 
-            DateTime dt = schedule.Activities.Max(a => a.Start).StartOfWeek().AddHours(8);
+            DateTime dt = schedule.Activities.Min(a => a.Start).StartOfWeek().AddHours(8);
 
             var lastDay = schedule.Activities.OrderBy(a => a.LastDay).Last().LastDay;
 
@@ -227,7 +226,13 @@ namespace planning
                 fileWriter.WriteLine("<html><head></head><body>");
 
                 void startElem(string name) => xmlWriter.WriteStartElement(name);
-                void attribute(string name, string value) => xmlWriter.WriteAttributeString(name, value);
+                void attribute(string name, string value) 
+                {
+                    if (value != null && value != "")
+                    {
+                        xmlWriter.WriteAttributeString(name, value);
+                    }
+                }
                 void innerText(string text) => xmlWriter.WriteString(text);
                 void endElem() => xmlWriter.WriteEndElement();
                 string styles(params (string name, string val)[] styles) =>
@@ -252,6 +257,7 @@ namespace planning
                     for (int i = 8; i <= 16; ++i)
                     {
                         startElem("div");
+                        attribute("class", "heading");
                         attribute("style", styles(
                             ("grid-column", "1"),
                             ("grid-row", $"{i - 5}")
@@ -263,6 +269,7 @@ namespace planning
                     for (int i = 0; i < 7; ++i)
                     {
                         startElem("div");
+                        attribute("class", "heading");
                         attribute("style", styles(
                             ("grid-row", "2"),
                             ("grid-column", $"{i + 2}")
@@ -275,7 +282,8 @@ namespace planning
                     {
                         var columnIndex = dt.Subtract(dt.StartOfWeek()).Days + 2;
 
-                        var allDayActivite = schedule.Activities.Where(a => a.AllDay && a.Start.Date == dt.Date);
+                        var allDayActivite = schedule.Activities
+                            .Where(a => a.AllDay && a.Start.Date == dt.Date).ToArray();
 
                         if (allDayActivite.Any())
                         {
@@ -288,6 +296,7 @@ namespace planning
                                 )
                             {
                                 startElem("div");
+                                attribute("class", activity.Class);
                                 attribute("style", styles(
                                         ("width", $"100%")
                                 ));
@@ -304,6 +313,7 @@ namespace planning
                             if (occurence.activity != null)
                             {
                                 startElem("div");
+                                attribute("class", occurence.activity.Class);
                                 attribute("style", styles(
                                     ("grid-row", $"{dt.Hour - 5} / span {occurence.duration}"),
                                     ("grid-column", $"{columnIndex}")

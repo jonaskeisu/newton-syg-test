@@ -1,0 +1,82 @@
+[
+  {
+    "Class": "lunch",
+    "Title": "Lunch",
+    "Start": "2020-11-23 12",
+    "Duration": 1,
+    "Repeat": {
+      "Weekdays": ["mon", "tue", "wed", "thu", "fri"],
+      "NumberOfWeeks": 2
+    }
+  },
+  {
+    "Class": "tutoring",
+    "Title": "Övningshandledning",
+    "Start": "2020-11-24 9",
+    "Duration": 7,
+    "Repeat": {
+      "Weekdays": ["tue", "wed"],
+      "NumberOfWeeks": 2
+    },
+    "Layer": -1
+  },
+  {
+    "Class": "tutoring",
+    "Title": "Övningshandledning",
+    "Start": "2020-11-26 8",
+    "Duration": 4,
+    "Repeat": {
+      "Weekdays": ["thu"],
+      "NumberOfWeeks": 2
+    },
+    "Layer": -1
+  },
+  {
+    "Class": "assignment",
+    "Title": "Utlämning projektuppgift",
+    "Start": "2020-11-24 9",
+    "AllDay": true
+  },
+  {
+    "Class": "assignment",
+    "Title": "Inlämning projektuppgift",
+    "Start": "2020-12-11 9",
+    "AllDay": true
+  },
+  {
+    "Class": "lecture",
+    "Title": "L1 - Introduktion till Unit-testning",
+    "Start": "2020-11-24 10",
+    "Duration": 2
+  },
+  {
+    "Class": "lecture",
+    "Title": "L2 - Testsviter och körning av tester",
+    "Start": "2020-11-25 10",
+    "Duration": 2
+  },
+  {
+    "Class": "lecture",
+    "Title": "L3 - Mockups",
+    "Start": "2020-12-01 10",
+    "Duration": 2
+  },
+  {
+    "Class": "lecture",
+    "Title": "L3 - Test-coverage",
+    "Start": "2020-12-02 10",
+    "Duration": 2
+  },
+  {
+    "Class": "lecture",
+    "Title": "L5 - Testdriven utveckling",
+    "Start": "2020-12-08 10",
+    "Duration": 2
+  },
+  {
+    "Class": "lecture",
+    "Title": "L6 - Continious Integration",
+    "Start": "2020-12-09 10",
+    "Duration": 2
+  }
+]

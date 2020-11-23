@@ -1,4 +1,18 @@
-<html><head></head><body>
+<link href="css/styling.css" rel="stylesheet"></link>
+
+© BIT ADDICT 2020 - All rights reserved
+
+[Resurser](#resurser) | [Inlämningsuppgifter](#assignments)
+
+# Mjukvarutestning
+### Newton - SYSG - TEST
+
+##  Resurser <a name="resurser"></a>
+
+## <a name="assignments"></a>
+
+## Schema
+
 <div>
   <h3>Vecka 48</h3>
   <div class="schedule" style="display:grid;grid-template-rows:auto auto auto auto auto auto auto auto auto auto auto;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr">
@@ -99,4 +113,4 @@
     </div>
     <div class="lunch" style="grid-row:7 / span 1;grid-column:6">Lunch</div>
   </div>
-</div></body>
+</div>
