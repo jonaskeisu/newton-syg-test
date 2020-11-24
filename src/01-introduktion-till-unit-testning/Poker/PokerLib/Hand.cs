@@ -16,7 +16,10 @@ namespace PokerLib
         private List<Card> cards = new List<Card>();
 
         /// <summary>
-        /// Type of the hand.
+        /// Type of the hand. For specification of what constitutes a certain
+        /// hand type, check <see
+        /// href="https://en.wikipedia.org/wiki/List_of_poker_hands">this
+        /// link</see>.
         /// </summary>
         /// <value>Type of the hand.</value>
         public HandType HandType { get; private set; }
@@ -88,11 +91,14 @@ namespace PokerLib
         }
 
         /// <summary>
-        /// Compare this hand to another hand.
+        /// Compare this hand to another hand. For a detailed description of how
+        /// to compare hands and split ties, check <see
+        /// href="https://en.wikipedia.org/wiki/List_of_poker_hands">this
+        /// link</see>.
         /// </summary>
         /// <param name="other">The other hand.</param>
         /// <returns>
-        /// <list>
+        /// <list type="table">
         ///     <item>
         ///         <term>Less than zero</term>
         ///          <description>This hand preceedes the other
@@ -133,7 +139,8 @@ namespace PokerLib
 
 
         /// <summary>
-        /// Get enumerator of hand cards.
+        /// Get enumerator of cards in the hand. The cards are always sorted,
+        /// first by rank, then by suite.
         /// </summary>
         /// <returns>Enumerator of hand cards.</returns>
         public IEnumerator<Card> GetEnumerator()
@@ -142,7 +149,8 @@ namespace PokerLib
         }
 
         /// <summary>
-        /// Get enumerator of hand cards.
+        /// Get enumerator of hand cards. The cards are always sorted,
+        /// first by rank, then by suite.
         /// </summary>
         /// <returns>Enumerator of hand cards.</returns>
         IEnumerator IEnumerable.GetEnumerator()

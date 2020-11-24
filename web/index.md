@@ -9,6 +9,14 @@
 
 ##  Resurser <a name="resurser"></a>
 
+- Dokumentationen för [NUnit](https://docs.nunit.org/)
+
+## Föreläsningar
+
+| Lektion | Presentation | Övningar | 
+| --- | --- | --- | 
+| L1 - Introduktion till Unit-testning | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.presentation.html) | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.övningar.html) | 
+
 ## <a name="assignments"></a>
 
 ## Schema
