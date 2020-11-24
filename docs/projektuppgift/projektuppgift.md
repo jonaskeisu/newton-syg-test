@@ -1,0 +1,3 @@
+# Inlämningsuppgift
+
+Inlämningsuppgiften går ut på att lägga till komplett Unittestning och Continuous Integration för ert egna PokerLib som ni produceade som en del av kursen SYSG - OP1. Testningen skall ha minst 95% code coverage för att uppgiften skall bli godkänd. Betygsättningen kommer baseras på hur väl kursens material har tillämpats i produktionen av testningen. Det ingår också i arbetet att vid behov refaktorera koden i PokerLib för att förbättra kodens design och underlätta Unit-testning.  

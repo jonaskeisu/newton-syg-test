@@ -2,75 +2,36 @@
 
 © BIT ADDICT 2020 - All rights reserved
 
-[Resurser](#resurser) | [Föreläsningar](#lectures) | [Utvecklingsverktyg](#devtools) | [Kommunikation](#communication) | [Projektuppgift](#assignments) | [Schema](#schedule)
+[Resurser](#resurser) | [Inlämningsuppgifter](#assignments)
 
 # Mjukvarutestning
 ### Newton - SYSG - TEST
 
-**Examinator**
+**Examinator:**
 
 Jonas Keisu
-E-mail: <a href="mailto:jonas.keisu@bitaddict.se">jonas.keisu@bitaddict.se</a>
+E-post: <a href="mailto:jonas.keisu@bitaddict.se">jonas.keisu@bitaddict.se</a>
 Telefon: 0706436313
+
+## Kurslitteratur
+
+Kursmaterialet består av de webbsidor som länkas under material samt  tillhandahållna presentationer från lektionerna, övningarna och inlämningsuppgifter.
 
 ##  Resurser <a name="resurser"></a>
 
 - Dokumentationen för [NUnit](https://docs.nunit.org/)
-- Microsoft Docs
-  - [Unit testing C# with NUnit and .NET Core](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit)
+- [Microsoft Docs](https://docs.microsoft.com/en-us/)  
+  - [Unit testing C# with NUNit and .NET Core](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit)
 
-## Föreläsningar <a name="lectures"></a>
+## Föreläsningar
 
 | Lektion | Presentation | Övningar | 
 | --- | --- | --- | 
 | L1 - Introduktion till Unit-testning | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.presentation.html) | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.övningar.html) | 
 
-## Utvecklingsverktyg <a name="devtools"></a>
+## <a name="assignments"></a>
 
-### Hårdvara
-
-Eleven behöver ha en persondator med något av operativsystemen Windows, macOS eller Linux.
-
-Eleven behöver också ha en snabb och stabil bredbandsuppkoppling, webbkamera och mikrofon. Det är starkt rekommenderat att alltid använda sig av video i möten.
-
-*Eleven ansvarar själv för administration av mjukvara och hårdvara på sin egna dator.*
-
-### Mjukvara
-
-Ramverket för mjukvaruutvecklingen är .NET 5
-
-Utvecklingsmiljön för kursen är och [Visual Studio Code](https://code.visualstudio.com/download) med tillhörande [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
-
-För versionhantering av källkod används [Git](https://git-scm.com/downloads).
-
-För delning av källkod används webbtjänsten [GitHub](https://github.com/).
-
-## Kommunikation <a name="communication"></a>
-
-För kommunikation online används följande verktyg:
-- [Kurshemsida](https://jonaskeisu.github.io/newton-sysg-test/) - uppdaterad information om lektioner, kursplan, m.m.
-- Föreläsningar ges via videochatt och ansluts via följande [länk](http://meet.google.com/zhn-oxvg-twg).
-- Google Meet - videomöte/skärmdelning ([webbklient](https://meet.google.com/))
-- Slack - chat/direktmeddelande ([webbklient](https://slack.com/get-started?email_first=1#/signin), [desktop](https://slack.com/intl/en-se/download), [Android](https://play.google.com/store/apps/details?id=com.Slack), [iOS](https://apps.apple.com/se/app/slack/id618783545))
-- Visual Studio Live Share - Kollborativ programmering ([VSC extension](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack))
-
-### Slack workspace
-
-För kommunikation med Slack används workspace: [newton-sysg4.slack.com](https://newton-sysg4.slack.com/)
-
-Elever kan skicka direktmeddelanden till varandra och till examinatorn via ovanstående workspace.
-
-Allmän kursinformation ges i chatkanalen #test.
-
-Chatkanalen #general är till för fri kommunikation mellan elever gällnde vad som helst som rör kursen, t.ex. ställa frågor öppna frågor eller dela med sig av tips.
-
-## Projektuppgift <a name="assignments"></a>
-
-Kursen examineras genom inlämning av följande projektuppgift:
-
-- [Projektuppgift - Unit-testning för PokerLib](./projektuppgift/projektuppgift.html)
-
-## Schema <a name="schedule"></a>
+## Schema
 
 <div>
   <h3>Vecka 48</h3>
