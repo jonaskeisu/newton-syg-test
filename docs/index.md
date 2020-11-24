@@ -10,7 +10,9 @@
 **Examinator**
 
 Jonas Keisu
+
 E-mail: <a href="mailto:jonas.keisu@bitaddict.se">jonas.keisu@bitaddict.se</a>
+
 Telefon: 0706436313
 
 ##  Resurser <a name="resurser"></a>
