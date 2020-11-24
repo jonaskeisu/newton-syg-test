@@ -34,7 +34,7 @@ presentation:
     zoom: 110%;
   }
   div.slides{
-    border: 1px solid black;
+    # border: 1px solid black;
   }
   .reveal code {
     zoom: 90%;
@@ -213,8 +213,8 @@ $ pwd
 /Users/jonaskeisu/src
 $ cd Poker
 $ dotnet new sln
-$ dotnet new classlib -n PokerLib
-$ dotnet sln add PokerLib/PokerLib.csproj
+$ dotnet new classlib -n Poker.Lib
+$ dotnet sln add Poker.Lib/Poker.Lib.csproj
 ```
 
 <!-- slide -->
@@ -224,9 +224,10 @@ Använd då följande kommando i ``Poker``-katalogen för att lägga till ett te
 ```console
 $ pwd
 /Users/jonaskeisu/src/Poker
-$ dotnet new nunit -n PokerLib.UnitTest
-$ cd PokerLib.UnitTest
-$ dotnet add reference ../PokerLib/PokerLib.csproj
+$ dotnet new nunit -n Poker.Lib.UnitTest
+$ dotnet sln add Poker.Lib.UnitTest/Poker.Lib.UnitTest.csproj
+$ cd Poker.Lib.UnitTest
+$ dotnet add reference ../Poker.Lib/Poker.Lib.csproj
 ```
 
 <!-- slide -->
@@ -514,7 +515,7 @@ public void HandCanBePair()
     var cardSets = new string[] {
         "♣2♦2♥3♥4♥5", "♠3♥7♠7♠8♠9", "♣9♣10♦J♥J♣Q", "♦J♦Q♦K♣A♠A" 
     };
-    foreach (var cardSet in cardSets.Select(cs => StringToCards(cs))) {
+    foreach (var cardSet in cardSets.Select(cs => ToCards(cs))) {
         Hand hand = new Hand();
         foreach (var card in cardSet)
             hand.AddCard(card);
