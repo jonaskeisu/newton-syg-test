@@ -217,6 +217,8 @@ $ dotnet new classlib -n Poker.Lib
 $ dotnet sln add Poker.Lib/Poker.Lib.csproj
 ```
 
+*(OBS: För projektuppgiften behöver ni inte göra ovanstående, det var så jag gjorde när jag skapade den solution som ni kodat vidare på)*
+
 <!-- slide -->
 
 Använd då följande kommando i ``Poker``-katalogen för att lägga till ett testprojekt och lägga till en referens i testprojektet till produktionskoden:
@@ -229,6 +231,8 @@ $ dotnet sln add Poker.Lib.UnitTest/Poker.Lib.UnitTest.csproj
 $ cd Poker.Lib.UnitTest
 $ dotnet add reference ../Poker.Lib/Poker.Lib.csproj
 ```
+
+*(Detta behöver ni göra för projektuppgiften)*
 
 <!-- slide -->
 
@@ -315,6 +319,8 @@ public void CardsCanBeAddedToHand() {
     }
 }
 ```
+
+*(OBS: Notera att kodexplena i presentationen inte går att använda rakt av med er kod, då era typer antagligen ser lite annorlunda ut)*
 
 <!-- slide -->
 
