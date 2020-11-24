@@ -50,8 +50,38 @@ presentation:
 ## Hur *vet* man att kod fungerar?
 
 - Man bevisar att den fungerar (matematiskt), eller..
-- Man testar kodar! 
+- Man *testar* koden. 
 - I industrin är den andra metoden betydligt vanligare.
+
+<!-- slide -->
+
+## Varför testa?
+
+- Värdet i mjukvara ligger i leverans av korrekt mjukvara som uppfyller användarens krav.
+- Det är kostsamt och dåligt för produktens rykte att användarna hittar fel i mjukvaran.
+- Det är därför viktigt att säkerställa så gott det går att mjukvaran fungerar *innan* leverans. 
+
+<!-- slide -->
+
+## Manuell testning
+
+- Ett sätt att testa mjukvara är manuell testning. 
+- Mjukvara har som regel väldigt många användningsscenarion och förändras ofta.
+  - Detta gör manuell testning väldigt dyrt.
+- Manuell testning är också långsamt, vilket försenar leverans av mjukvaran.
+
+<!-- slide -->
+
+## Autmatisk testning
+
+- Ett annat sätt att testa mjukvara är *automatiskt* testning.
+- Automatiskt testning är kod vars syfte är att testar att koden för användarens mjukvara uppfyller alla krav.
+- Automatiska tester: 
+  - Minskar kostnaden för projektet. 
+  - Ökar kvaliteten på produkten. 
+  - Tillåter produkten att släppas snabbare och oftare.
+- Det är systemutvecklaren ansvar att producera den automatiska testningen.
+
 
 <!-- slide -->
 
@@ -458,8 +488,8 @@ static Card[] ToCards(string text) {
     int i = 0; 
     while(i < text.Length) {
         Suite suite = (text[i]) switch {
-            '♣' => Clubs, '♦' => Diamonds, '♥' => Hearts, 
-            '♠'=> Spades, _ => throw new NotImplementedException(),
+            '♣' => Clubs, '♦' => Diamonds, '♥' => Hearts, '♠'=> Spades, 
+            _ => throw new NotImplementedException(),
         };
         var rankString = text.Substring(i + 1);
         var rankFunc = new Dictionary<string, Func<string, Rank>>() {
@@ -493,12 +523,6 @@ public void HandCanBePair()
 }
 ```
 
-<!-- slide -->
-
-## Övningar
-
-- Lägg till ett unittestprojekt i ert egna pokerspel. 
-- Skriv unittester som testar alla krav på egenskaper och medlemmar för ``Hand``-klassen i ert egna pokerspel från föregående kurs. 
 
 
 
