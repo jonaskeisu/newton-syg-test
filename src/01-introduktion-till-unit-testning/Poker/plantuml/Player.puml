@@ -1,0 +1,11 @@
+@startuml
+class Player {
+    + Name : string <<get>>
+    + Wins : int <<get>>
+    + Player(name:string, wins:int)
+    + RecieveCard(card:Card) : void
+    + GiveBackHand() : IEnumerable<Card>
+    + ThrowCards(graveyard:List<Card>) : void
+}
+Player --> "Hand" Hand
+@enduml

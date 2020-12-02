@@ -10,7 +10,7 @@ namespace PokerLib
         Straight,
         Flush,
         FullHouse,
-        FourOfAKinds,
+        FourOfAKind,
         StraightFlush
     }
 }

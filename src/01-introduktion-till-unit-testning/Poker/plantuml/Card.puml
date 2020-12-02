@@ -1,0 +1,8 @@
+@startuml
+class Card {
+    + Card(suite:Suite, rank:Rank)
+    + <<override>> Equals(obj:Object?) : bool
+}
+Card --> "Suite" Suite
+Card --> "Rank" Rank
+@enduml

@@ -1,0 +1,82 @@
+@startuml
+class Dealer {
+    + Dealer(deck:Deck)
+    + Deal(players:IEnumerable<Player>) : void
+    + ReplaceCards(player:Player) : void
+    + CollectAllCards(graveyard:List<Card>, players:IEnumerable<Player>) : void
+    + SelectPlayersWithBestHand(players:IEnumerable<Player>) : IEnumerable<Player>
+}
+enum Suite {
+    Clubs= 1,
+    Diamonds,
+    Hearts,
+    Spades,
+}
+class Deck {
+    + Deck()
+    + DrawCard() : Card
+    + Shuffle() : void
+    + ReturnCards(cards:IEnumerable<Card>) : void
+}
+class HandException {
+    + HandException()
+    + HandException(message:string)
+    + HandException(message:string, inner:System.Exception)
+}
+enum HandType {
+    Incomplete= -1,
+    HighCard,
+    Pair,
+    TwoPairs,
+    ThreeOfAKind,
+    Straight,
+    Flush,
+    FullHouse,
+    FourOfAKind,
+    StraightFlush,
+}
+class Hand {
+    + AddCard(card:Card) : void
+    + RemoveCard(card:Card) : void
+    + CompareTo(other:Hand?) : int
+    + GetEnumerator() : IEnumerator<Card>
+    GetEnumerator() : IEnumerator
+}
+class "IComparable`1"<T> {
+}
+class "IEnumerable`1"<T> {
+}
+"IComparable`1" "<Hand>" <|-- Hand
+"IEnumerable`1" "<Card>" <|-- Hand
+Hand --> "HandType" HandType
+enum Rank {
+    Two= 2,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Jack,
+    Queen,
+    King,
+    Ace,
+}
+class Card {
+    + Card(suite:Suite, rank:Rank)
+    + <<override>> Equals(obj:Object?) : bool
+}
+Card --> "Suite" Suite
+Card --> "Rank" Rank
+class Player {
+    + Name : string <<get>>
+    + Wins : int <<get>>
+    + Player(name:string, wins:int)
+    + RecieveCard(card:Card) : void
+    + GiveBackHand() : IEnumerable<Card>
+    + ThrowCards(graveyard:List<Card>) : void
+}
+Player --> "Hand" Hand
+@enduml

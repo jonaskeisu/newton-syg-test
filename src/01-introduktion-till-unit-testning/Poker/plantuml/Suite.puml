@@ -1,0 +1,8 @@
+@startuml
+enum Suite {
+    Clubs= 1,
+    Diamonds,
+    Hearts,
+    Spades,
+}
+@enduml

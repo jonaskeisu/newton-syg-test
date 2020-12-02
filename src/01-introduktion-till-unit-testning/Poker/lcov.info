@@ -1,0 +1,455 @@
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/Card.cs
+FN:8,PokerLib.Suite PokerLib.Card::get_Suite()
+FNDA:32797,PokerLib.Suite PokerLib.Card::get_Suite()
+DA:9,32797
+FN:9,PokerLib.Rank PokerLib.Card::get_Rank()
+FNDA:25292,PokerLib.Rank PokerLib.Card::get_Rank()
+DA:10,25292
+FN:25,PokerLib.Card PokerLib.Card::op_Implicit(System.ValueTuple`2<PokerLib.Suite,PokerLib.Rank>)
+FNDA:2716,PokerLib.Card PokerLib.Card::op_Implicit(System.ValueTuple`2<PokerLib.Suite,PokerLib.Rank>)
+DA:26,2716
+FN:28,System.Boolean PokerLib.Card::Equals(System.Object)
+FNDA:7445,System.Boolean PokerLib.Card::Equals(System.Object)
+DA:29,7445
+DA:31,7445
+DA:32,0
+DA:33,0
+DA:36,7445
+DA:37,7445
+DA:38,7445
+DA:40,7445
+BRDA:31,2,0,7445
+BRDA:31,2,1,0
+BRDA:31,29,0,0
+BRDA:31,29,1,7445
+BRDA:38,56,0,3417
+BRDA:38,56,1,4028
+FN:42,System.Boolean PokerLib.Card::op_Equality(PokerLib.Card,PokerLib.Card)
+FNDA:0,System.Boolean PokerLib.Card::op_Equality(PokerLib.Card,PokerLib.Card)
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:54,0
+DA:57,0
+DA:58,0
+BRDA:45,7,0,0
+BRDA:47,16,0,0
+BRDA:47,16,1,0
+BRDA:45,7,1,0
+FN:60,System.Boolean PokerLib.Card::op_Inequality(PokerLib.Card,PokerLib.Card)
+FNDA:0,System.Boolean PokerLib.Card::op_Inequality(PokerLib.Card,PokerLib.Card)
+DA:61,0
+DA:62,0
+DA:63,0
+FN:10,System.Void PokerLib.Card::.ctor(PokerLib.Suite,PokerLib.Rank)
+FNDA:2781,System.Void PokerLib.Card::.ctor(PokerLib.Suite,PokerLib.Rank)
+DA:11,2781
+DA:12,2781
+DA:13,2781
+DA:14,2
+DA:15,2
+DA:17,2779
+DA:18,2
+DA:19,2
+DA:21,2777
+DA:22,2777
+DA:23,2777
+BRDA:13,10,0,2780
+BRDA:13,10,1,1
+BRDA:13,21,0,2
+BRDA:13,21,1,2779
+BRDA:17,37,0,2778
+BRDA:17,37,1,1
+BRDA:17,49,0,2
+BRDA:17,49,1,2777
+LF:34
+LH:20
+BRF:18
+BRH:12
+FNF:7
+FNH:5
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/ConsolePlayer.cs
+FN:5,PokerLib.Card[] PokerLib.ConsolePlayer::ChooseCardsForExchange(PokerLib.Player)
+FNDA:0,PokerLib.Card[] PokerLib.ConsolePlayer::ChooseCardsForExchange(PokerLib.Player)
+DA:6,0
+DA:7,0
+DA:8,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/Dealer.cs
+FN:7,PokerLib.IDeck PokerLib.Dealer::get_Deck()
+FNDA:51,PokerLib.IDeck PokerLib.Dealer::get_Deck()
+DA:8,51
+FN:15,System.Void PokerLib.Dealer::Deal(System.Collections.Generic.IEnumerable`1<PokerLib.Player>)
+FNDA:3,System.Void PokerLib.Dealer::Deal(System.Collections.Generic.IEnumerable`1<PokerLib.Player>)
+DA:16,3
+DA:17,3
+DA:18,36
+DA:19,15
+DA:20,135
+DA:21,45
+DA:22,45
+DA:23,45
+DA:24,15
+DA:25,3
+BRDA:18,87,1,15
+BRDA:20,61,1,45
+BRDA:20,61,0,15
+BRDA:18,87,0,3
+FN:27,System.Void PokerLib.Dealer::ReplaceCards(PokerLib.Player)
+FNDA:0,System.Void PokerLib.Dealer::ReplaceCards(PokerLib.Player)
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+BRDA:29,39,1,0
+BRDA:29,39,0,0
+FN:35,System.Void PokerLib.Dealer::CollectAllCards(System.Collections.Generic.List`1<PokerLib.Card>,System.Collections.Generic.IEnumerable`1<PokerLib.Player>)
+FNDA:0,System.Void PokerLib.Dealer::CollectAllCards(System.Collections.Generic.List`1<PokerLib.Card>,System.Collections.Generic.IEnumerable`1<PokerLib.Player>)
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+BRDA:39,64,1,0
+BRDA:39,64,0,0
+FN:45,System.Collections.Generic.IEnumerable`1<PokerLib.Player> PokerLib.Dealer::SelectPlayersWithBestHand(System.Collections.Generic.IEnumerable`1<PokerLib.Player>)
+FNDA:0,System.Collections.Generic.IEnumerable`1<PokerLib.Player> PokerLib.Dealer::SelectPlayersWithBestHand(System.Collections.Generic.IEnumerable`1<PokerLib.Player>)
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+FN:9,System.Void PokerLib.Dealer::.ctor(PokerLib.IDeck)
+FNDA:3,System.Void PokerLib.Dealer::.ctor(PokerLib.IDeck)
+DA:10,3
+DA:11,3
+DA:12,3
+DA:13,3
+LF:33
+LH:15
+BRF:8
+BRH:4
+FNF:6
+FNH:3
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/Deck.cs
+FN:21,PokerLib.Card PokerLib.Deck::DrawCard()
+FNDA:0,PokerLib.Card PokerLib.Deck::DrawCard()
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+FN:28,System.Void PokerLib.Deck::Shuffle()
+FNDA:0,System.Void PokerLib.Deck::Shuffle()
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+BRDA:31,105,1,0
+BRDA:31,105,0,0
+FN:40,System.Void PokerLib.Deck::ReturnCards(System.Collections.Generic.IEnumerable`1<PokerLib.Card>)
+FNDA:0,System.Void PokerLib.Deck::ReturnCards(System.Collections.Generic.IEnumerable`1<PokerLib.Card>)
+DA:41,0
+DA:42,0
+DA:43,0
+FN:8,System.Void PokerLib.Deck::.ctor()
+FNDA:0,System.Void PokerLib.Deck::.ctor()
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+BRDA:12,151,1,0
+BRDA:14,119,1,0
+BRDA:14,119,0,0
+BRDA:12,151,0,0
+LF:29
+LH:0
+BRF:6
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/Game.cs
+FN:19,System.Void PokerLib.Game::Play()
+FNDA:0,System.Void PokerLib.Game::Play()
+DA:20,0
+DA:21,0
+DA:23,0
+DA:24,0
+DA:26,0
+FN:8,System.Void PokerLib.Game::.ctor(System.String[])
+FNDA:0,System.Void PokerLib.Game::.ctor(System.String[])
+DA:9,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+BRDA:13,64,1,0
+BRDA:13,64,0,0
+LF:13
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/Hand.cs
+FN:27,PokerLib.HandType PokerLib.Hand::get_HandType()
+FNDA:4660,PokerLib.HandType PokerLib.Hand::get_HandType()
+DA:28,4660
+FN:38,System.Void PokerLib.Hand::AddCard(PokerLib.Card)
+FNDA:3525,System.Void PokerLib.Hand::AddCard(PokerLib.Card)
+DA:39,3525
+DA:40,3525
+DA:41,1
+DA:42,3524
+DA:43,4
+DA:44,3520
+DA:45,0
+DA:46,3520
+DA:47,24760
+DA:48,3520
+DA:50,3520
+BRDA:40,17,0,1
+BRDA:40,17,1,3524
+BRDA:42,44,0,4
+BRDA:42,44,1,3520
+BRDA:44,68,0,0
+BRDA:44,68,1,3520
+FN:52,PokerLib.HandType PokerLib.Hand::CalculateHandType()
+FNDA:3520,PokerLib.HandType PokerLib.Hand::CalculateHandType()
+DA:53,3520
+DA:54,3520
+DA:55,2809
+DA:61,4266
+DA:63,711
+DA:64,711
+DA:66,7073
+DA:67,711
+DA:69,711
+DA:71,60
+DA:72,212
+DA:73,32
+DA:75,407
+DA:78,124
+DA:79,167
+DA:80,42
+DA:81,74
+DA:84,3520
+BRDA:54,17,0,2809
+BRDA:54,17,1,711
+BRDA:63,90,0,624
+BRDA:63,109,0,307
+BRDA:63,129,0,41
+BRDA:63,109,1,583
+BRDA:63,129,1,583
+BRDA:63,90,1,87
+BRDA:69,270,0,272
+BRDA:69,270,1,439
+BRDA:69,283,1,60
+BRDA:69,283,0,212
+BRDA:69,298,1,32
+BRDA:69,298,0,407
+BRDA:75,333,1,124
+BRDA:78,360,0,62
+BRDA:78,360,1,62
+BRDA:75,333,2,167
+BRDA:79,377,0,87
+BRDA:79,377,1,80
+BRDA:75,333,3,42
+BRDA:75,333,0,74
+FN:91,System.Void PokerLib.Hand::RemoveCard(PokerLib.Card)
+FNDA:80,System.Void PokerLib.Hand::RemoveCard(PokerLib.Card)
+DA:92,80
+DA:93,80
+DA:94,0
+DA:95,80
+DA:96,80
+BRDA:93,18,0,0
+BRDA:93,18,1,80
+FN:122,System.Int32 PokerLib.Hand::CompareTo(PokerLib.Hand)
+FNDA:108,System.Int32 PokerLib.Hand::CompareTo(PokerLib.Hand)
+DA:123,108
+DA:124,108
+DA:125,9
+DA:126,9
+DA:128,99
+DA:129,18
+DA:131,81
+DA:132,72
+DA:143,9
+DA:144,9
+DA:146,43
+DA:147,81
+BRDA:124,7,0,9
+BRDA:124,7,1,99
+BRDA:128,28,0,90
+BRDA:128,28,1,9
+BRDA:128,44,0,18
+BRDA:128,44,1,81
+BRDA:131,78,0,72
+BRDA:131,78,1,9
+BRDA:146,1,0,0
+BRDA:146,1,1,34
+FN:155,System.Collections.Generic.IEnumerator`1<PokerLib.Card> PokerLib.Hand::GetEnumerator()
+FNDA:117,System.Collections.Generic.IEnumerator`1<PokerLib.Card> PokerLib.Hand::GetEnumerator()
+DA:156,117
+DA:157,117
+DA:158,117
+FN:165,System.Collections.IEnumerator PokerLib.Hand::System.Collections.IEnumerable.GetEnumerator()
+FNDA:41,System.Collections.IEnumerator PokerLib.Hand::System.Collections.IEnumerable.GetEnumerator()
+DA:166,41
+DA:167,41
+DA:168,41
+FN:56,System.Boolean PokerLib.Hand::<CalculateHandType>g__isStraight|7_0(System.Collections.Generic.IEnumerable`1<PokerLib.Card>)
+FNDA:752,System.Boolean PokerLib.Hand::<CalculateHandType>g__isStraight|7_0(System.Collections.Generic.IEnumerable`1<PokerLib.Card>)
+DA:57,752
+DA:58,2209
+DA:59,752
+FN:134,System.Collections.Generic.List`1<PokerLib.Rank> PokerLib.Hand::<CompareTo>g__findRankGroups|9_0(System.Collections.Generic.List`1<PokerLib.Card>)
+FNDA:18,System.Collections.Generic.List`1<PokerLib.Rank> PokerLib.Hand::<CompareTo>g__findRankGroups|9_0(System.Collections.Generic.List`1<PokerLib.Card>)
+DA:135,18
+DA:136,108
+DA:137,86
+DA:138,86
+DA:139,86
+DA:140,18
+DA:141,18
+FN:17,System.Void PokerLib.Hand::.ctor()
+FNDA:691,System.Void PokerLib.Hand::.ctor()
+DA:18,691
+DA:19,691
+LF:65
+LH:63
+BRF:40
+BRH:37
+FNF:10
+FNH:10
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/HandException.cs
+FN:7,System.Void PokerLib.HandException::.ctor()
+FNDA:0,System.Void PokerLib.HandException::.ctor()
+DA:8,0
+FN:8,System.Void PokerLib.HandException::.ctor(System.String)
+FNDA:96,System.Void PokerLib.HandException::.ctor(System.String)
+DA:9,96
+FN:9,System.Void PokerLib.HandException::.ctor(System.String,System.Exception)
+FNDA:0,System.Void PokerLib.HandException::.ctor(System.String,System.Exception)
+DA:10,0
+FN:12,System.Void PokerLib.HandException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+FNDA:0,System.Void PokerLib.HandException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+DA:13,0
+LF:4
+LH:1
+BRF:0
+BRH:0
+FNF:4
+FNH:1
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/Player.cs
+FN:7,PokerLib.IPlayerLogic PokerLib.Player::get_PlayerLogic()
+FNDA:74,PokerLib.IPlayerLogic PokerLib.Player::get_PlayerLogic()
+DA:8,74
+FN:9,PokerLib.Hand PokerLib.Player::get_Hand()
+FNDA:565,PokerLib.Hand PokerLib.Player::get_Hand()
+DA:10,565
+FN:11,System.String PokerLib.Player::get_Name()
+FNDA:0,System.String PokerLib.Player::get_Name()
+DA:12,0
+FN:13,System.Int32 PokerLib.Player::get_Wins()
+FNDA:0,System.Int32 PokerLib.Player::get_Wins()
+DA:14,0
+FN:24,System.Void PokerLib.Player::RecieveCard(PokerLib.Card)
+FNDA:290,System.Void PokerLib.Player::RecieveCard(PokerLib.Card)
+DA:25,290
+DA:26,290
+DA:27,290
+FN:29,System.Collections.Generic.IEnumerable`1<PokerLib.Card> PokerLib.Player::GiveBackHand()
+FNDA:1,System.Collections.Generic.IEnumerable`1<PokerLib.Card> PokerLib.Player::GiveBackHand()
+DA:30,1
+DA:31,1
+DA:32,1
+DA:33,1
+DA:34,1
+FN:36,System.Void PokerLib.Player::ThrowCards(System.Collections.Generic.List`1<PokerLib.Card>)
+FNDA:32,System.Void PokerLib.Player::ThrowCards(System.Collections.Generic.List`1<PokerLib.Card>)
+DA:37,32
+DA:38,32
+DA:39,256
+DA:40,80
+DA:41,80
+DA:42,80
+DA:43,80
+DA:44,32
+BRDA:39,56,1,80
+BRDA:39,56,0,32
+FN:15,System.Void PokerLib.Player::.ctor(System.String,System.Int32,PokerLib.IPlayerLogic)
+FNDA:42,System.Void PokerLib.Player::.ctor(System.String,System.Int32,PokerLib.IPlayerLogic)
+DA:16,42
+DA:17,42
+DA:18,42
+DA:19,42
+DA:20,42
+DA:21,42
+DA:22,42
+LF:27
+LH:25
+BRF:2
+BRH:2
+FNF:8
+FNH:6
+end_of_record
+SF:/Users/jonaskeisu/src/newton-sysg-test/src/01-introduktion-till-unit-testning/Poker/PokerLib/UI.cs
+FN:9,PokerLib.Card[] PokerLib.UI::ChooseCardsForExchange(PokerLib.Player)
+FNDA:0,PokerLib.Card[] PokerLib.UI::ChooseCardsForExchange(PokerLib.Player)
+DA:10,0
+DA:11,0
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+BRDA:17,84,1,0
+BRDA:17,84,0,0
+LF:11
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record

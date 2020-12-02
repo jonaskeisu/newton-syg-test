@@ -1,0 +1,14 @@
+@startuml
+enum HandType {
+    Incomplete= -1,
+    HighCard,
+    Pair,
+    TwoPairs,
+    ThreeOfAKind,
+    Straight,
+    Flush,
+    FullHouse,
+    FourOfAKind,
+    StraightFlush,
+}
+@enduml

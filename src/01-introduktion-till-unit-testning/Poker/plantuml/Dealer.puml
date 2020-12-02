@@ -1,0 +1,9 @@
+@startuml
+class Dealer {
+    + Dealer(deck:Deck)
+    + Deal(players:IEnumerable<Player>) : void
+    + ReplaceCards(player:Player) : void
+    + CollectAllCards(graveyard:List<Card>, players:IEnumerable<Player>) : void
+    + SelectPlayersWithBestHand(players:IEnumerable<Player>) : IEnumerable<Player>
+}
+@enduml

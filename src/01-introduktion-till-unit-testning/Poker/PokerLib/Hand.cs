@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using static PokerLib.HandType;
 using static PokerLib.Rank;
+using System.Runtime.CompilerServices;
+
+[assembly:InternalsVisibleTo("PokerLib.UnitTest")]
 
 namespace PokerLib
 {
     /// <summary>
     /// Class of poker hand objects.
     /// </summary>
-    public class Hand : IComparable<Hand>, IEnumerable<Card>
+    class Hand : IComparable<Hand>, IEnumerable<Card>
     {
         private HandType handType = HandType.Incomplete;
         private List<Card> cards = new List<Card>();
@@ -63,19 +66,21 @@ namespace PokerLib
             var groupSizes = cards.GroupBy(c => c.Rank).Select(g => g.Count()).ToList();
             groupSizes.Sort();
 
-            return (flush, straight) switch
+            switch (flush, straight)
             {
-                (true, true) => StraightFlush,
-                (true, false) => Flush,
-                (false, true) => Straight,
-                _ => (groupSizes.Count) switch
-                {
-                    2 => groupSizes[0] == 1 ? FourOfAKinds : FullHouse,
-                    3 => groupSizes.Contains(3) ? ThreeOfAKind : TwoPairs,
-                    4 => Pair,
-                    _ => HighCard,
-                },
-            };
+                case (true, true): return StraightFlush;
+                case (true, false): return Flush;
+                case (false, true): return Straight;
+                default: 
+                    switch (groupSizes.Count)
+                    {
+                
+                    case 2: return groupSizes[0] == 1 ? FourOfAKind : FullHouse;
+                    case 3: return groupSizes.Contains(3) ? ThreeOfAKind : TwoPairs;
+                    case 4: return Pair;
+                    default: return HighCard;
+                    }
+            }
         }
 
         /// <summary>
@@ -114,13 +119,17 @@ namespace PokerLib
         ///     </item>
         /// </list>
         /// </returns>
-        public int CompareTo(Hand other)
+        public int CompareTo(Hand? other)
         {
+            if (other is null)
+            {
+                throw new HandException("Can't compare to null hand.");
+            }
             if (HandType == Incomplete || other.HandType == Incomplete)
                 throw new HandException("Can't compare incomplete hands");
 
             if (HandType != other.HandType)
-                return HandType.CompareTo(HandType);
+                return HandType.CompareTo(other.HandType);
 
             List<Rank> findRankGroups(List<Card> cards) =>
                 cards

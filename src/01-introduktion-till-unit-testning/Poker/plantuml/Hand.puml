@@ -1,0 +1,16 @@
+@startuml
+class Hand {
+    + AddCard(card:Card) : void
+    + RemoveCard(card:Card) : void
+    + CompareTo(other:Hand?) : int
+    + GetEnumerator() : IEnumerator<Card>
+    GetEnumerator() : IEnumerator
+}
+class "IComparable`1"<T> {
+}
+class "IEnumerable`1"<T> {
+}
+"IComparable`1" "<Hand>" <|-- Hand
+"IEnumerable`1" "<Card>" <|-- Hand
+Hand --> "HandType" HandType
+@enduml

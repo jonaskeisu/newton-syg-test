@@ -23,9 +23,12 @@ Telefon: 0706436313
 
 ## Föreläsningar <a name="lectures"></a>
 
-| Lektion | Presentation | Övningar | 
-| --- | --- | --- | 
-| L1 - Introduktion till Unit-testning | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.presentation.html) | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.övningar.html) | 
+| Lektion | Presentation |
+| --- | --- | 
+| L1 - Introduktion till Unit-testning | [html](./lektioner/01-introduktion-till-unit-testning/01-introduktion-till-unit-testning.presentation.html) | 
+| L2 - Testsviter och körning av tester | [html](./lektioner/02-testsviter-och-körning-av-tester/02-testsviter-och-körning-av-tester.presentation.html) | 
+| L3 - Mockups | [html](./lektioner/03-mockups/03-mockups.presentation.html) | 
+| L4 - Test coverage | [html](./lektioner/04-test-coverage/04-test-coverage.presentation.html)
 
 ## Utvecklingsverktyg <a name="devtools"></a>
 

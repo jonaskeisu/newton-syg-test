@@ -1,0 +1,8 @@
+@startuml
+class Deck {
+    + Deck()
+    + DrawCard() : Card
+    + Shuffle() : void
+    + ReturnCards(cards:IEnumerable<Card>) : void
+}
+@enduml

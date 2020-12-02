@@ -1,0 +1,4 @@
+{
+    "dotnet-test-explorer.testProjectPath": "PokerLib.UnitTest/PokerLib.UnitTest.csproj", 
+    "dotnet-test-explorer.testArguments": ""
+}

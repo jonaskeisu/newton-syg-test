@@ -1,0 +1,7 @@
+@startuml
+class HandException {
+    + HandException()
+    + HandException(message:string)
+    + HandException(message:string, inner:System.Exception)
+}
+@enduml
